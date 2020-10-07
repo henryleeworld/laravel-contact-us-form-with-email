@@ -14,11 +14,11 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/contact', [
-    'uses' => 'ContactUsController@index'
+    'uses' => 'App\Http\Controllers\ContactUsController@index'
 ]);
 
 // Post form data
 Route::post('/contact', [
-    'uses' => 'ContactUsController@store',
+    'uses' => 'App\Http\Controllers\ContactUsController@store',
     'as' => 'contact.store'
 ]);

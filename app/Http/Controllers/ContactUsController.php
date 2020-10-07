@@ -4,7 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\StoreContactUsRequest;
-use App\ContactUs;
+use App\Models\ContactUs;
 
 class ContactUsController extends Controller
 {
