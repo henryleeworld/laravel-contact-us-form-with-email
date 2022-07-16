@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactUsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -12,13 +13,5 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
-Route::get('/contact', [
-    'uses' => 'App\Http\Controllers\ContactUsController@index'
-]);
-
-// Post form data
-Route::post('/contact', [
-    'uses' => 'App\Http\Controllers\ContactUsController@store',
-    'as' => 'contact.store'
-]);
+Route::get('/contact', [ContactUsController::class, 'index']);
+Route::post('/contact', [ContactUsController::class, 'store'])->name('contact.store');
