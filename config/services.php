@@ -13,7 +13,6 @@ return [
     | a conventional file to locate the various service credentials.
     |
     */
-
     'ipinfo' => [
         'token' => env('IPINFO_TOKEN'),
     ],

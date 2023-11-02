@@ -11,7 +11,7 @@ form {
     padding: 40px 50px 45px;
 }
 
-.form-control:focus {
+.row:focus {
     border-color: #000;
     box-shadow: none;
 }
@@ -28,7 +28,7 @@ label {
     font-size: 14px;
 }
 
-.form-control.error {
+.row.error {
     border-color: red;
     padding: .375rem .75rem;
 }
@@ -36,4 +36,5 @@ label {
 .iti {
     position: relative;
     display: flex;
+    padding: 0 0;
 }
