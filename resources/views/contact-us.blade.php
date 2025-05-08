@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
-        <meta charset="utf-8" />
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <title>Laravel</title>
         <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.2.3/css/bootstrap.min.css" integrity="sha512-SbiR/eusphKoMVVXysTKG/7VseWii+Y3FdHrt0EpKgpToZeemhqHeZeLWLhJutz/2ut2Vw1uQEj2MbRF+TVBUA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/css/intlTelInput.css" integrity="sha512-gxWow8Mo6q6pLa1XH/CcH8JyiSDEtiwJV78E+D+QP0EVasFs8wKXq16G8CLD4CJ2SnonHr4Lm/yY2fSI2+cbmw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.3.3/css/bootstrap.min.css" integrity="sha512-jnSuA4Ss2PkkikSOLtYs8BlYIeeIK1h99ty4YfvRPAlzr377vr3CXDb7sb7eEEBYjDtcYj+AjBH3FLv5uSJuXg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/23.1.0/css/intlTelInput.css" integrity="sha512-OkSoWyaoScjXhOm87XO5hDz1E5buvm2aAkq+5zJmaYpylA0OKJ5no5qc4ZRrmApoaXEgXc3n0iyVS1q5FgiJjg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" type="text/css" href="{{ asset('css/contact-us.css') }}" />
     </head>
     <body>
@@ -20,7 +20,7 @@
             <form action="" method="post" action="{{ route('contact.store') }}">
                 @csrf
                 <div class="mb-3 row">
-                    <label>{{ trans('frontend.contact_us.content.name') }}</label>
+                    <label>{{ __('Name') }}</label>
                     <input type="text" class="form-control {{ $errors->has('name') ? 'error' : '' }}" name="name" id="name" />
                     <!-- Error -->
                     @if ($errors->has('name'))
@@ -30,7 +30,7 @@
                     @endif
                 </div>
                 <div class="mb-3 row">
-                    <label>{{ trans('frontend.contact_us.content.email') }}</label>
+                    <label>{{ __('Email') }}</label>
                     <input type="email" class="form-control {{ $errors->has('email') ? 'error' : '' }}" name="email" id="email" />
 
                     @if ($errors->has('email'))
@@ -40,7 +40,7 @@
                     @endif
                 </div>
                 <div class="mb-3 row">
-                    <label>{{ trans('frontend.contact_us.content.phone') }}</label>
+                    <label>{{ __('Phone') }}</label>
                     <input type="hidden" id="phone-iso-2" name="phone-iso-2" value="">
                     <input type="hidden" id="phone-dial-code" name="phone-dial-code" value="">
                     <input type="tel" class="form-control {{ $errors->has('phone') ? 'error' : '' }}" name="phone" id="phone" />
@@ -51,7 +51,7 @@
                     @endif
                 </div>
                 <div class="mb-3 row">
-                    <label>{{ trans('frontend.contact_us.content.subject') }}</label>
+                    <label>{{ __('Subject') }}</label>
                     <input type="text" class="form-control {{ $errors->has('subject') ? 'error' : '' }}" name="subject" id="subject" />
                     @if ($errors->has('subject'))
                         <div class="error">
@@ -60,7 +60,7 @@
                     @endif
                 </div>
                 <div class="mb-3 row">
-                    <label>{{ trans('frontend.contact_us.content.note') }}</label>
+                    <label>{{ __('Message') }}</label>
                     <textarea class="form-control {{ $errors->has('note') ? 'error' : '' }}" name="note" id="note" rows="4"></textarea>
                     @if ($errors->has('note'))
                         <div class="error">
@@ -68,11 +68,11 @@
                         </div>
                     @endif
                 </div>
-                <input type="submit" name="send" value="{{ trans('frontend.contact_us.content.submit') }}" class="btn btn-dark btn-block" />
+                <input type="submit" name="send" value="{{ __('Submit') }}" class="btn btn-dark btn-block" />
             </form>
         </div>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.19/js/intlTelInput.min.js" integrity="sha512-+gShyB8GWoOiXNwOlBaYXdLTiZt10Iy6xjACGadpqMs20aJOoh+PJt3bwUVA6Cefe7yF7vblX6QwyXZiVwTWGg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/23.1.0/js/intlTelInput.min.js" integrity="sha512-nSv4TmHKiFdWKcAEKs+OW4rd9OPo4ZNNVHxhpIQj/dZwLSDrjO8Lq6YJn5AzFeFwqXaA+u9xdVvRbfkfExTkLg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
         <script>
             var input = document.querySelector("#phone");
             var instance = window.intlTelInput(input, {

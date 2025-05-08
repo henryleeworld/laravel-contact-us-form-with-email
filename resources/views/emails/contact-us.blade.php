@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
     <head>
         <meta name="viewport" content="width=device-width" />
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-        <title>Simple Transactional Email</title>
+        <title>{{ __('Contact Us') }}</title>
         <style>
             @media only screen and (max-width: 620px) {
                 table[class="body"] h1 {
@@ -91,7 +91,7 @@
                 <td class="container" style="font-family: sans-serif; font-size: 14px; vertical-align: top; display: block; margin: 0 auto; max-width: 580px; padding: 10px; width: 580px;">
                     <div class="content" style="box-sizing: border-box; display: block; margin: 0 auto; max-width: 580px; padding: 10px;">
                         <span class="preheader" style="color: transparent; display: none; height: 0; max-height: 0; max-width: 0; opacity: 0; overflow: hidden; mso-hide: all; visibility: hidden; width: 0;">
-                            This is preheader text. Some clients will show this text as a preview.
+						    {{ __('Contact Us') }}
                         </span>
                         <table class="main" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; background: #ffffff; border-radius: 3px;">
                             <tr>
@@ -99,32 +99,32 @@
                                     <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
                                         <tr>
                                             <td style="font-family: sans-serif; font-size: 14px; vertical-align: top;">
-                                                <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; margin-bottom: 15px;">{{ trans('frontend.contact_us.mail.hi') }}</p>
-                                                <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; margin-bottom: 15px;">{{ trans('frontend.contact_us.mail.you_have_got_an_email') }} {{ $name }}</p>
+                                                <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; margin-bottom: 15px;">{{ __('Hi,') }}</p>
+                                                <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; margin-bottom: 15px;">{{ __('You have got an email from: ') }} {{ $name }}</p>
                                                 <table border="0" cellpadding="0" cellspacing="0" class="btn btn-primary" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%; box-sizing: border-box;">
                                                     <tbody>
                                                         <tr>
                                                             <td align="left" style="font-family: sans-serif; font-size: 14px; vertical-align: top; padding-bottom: 15px;">
-                                                                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: auto;">
+                                                                <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: separate; mso-table-lspace: 0pt; mso-table-rspace: 0pt; width: 100%;">
                                                                     <tbody>
                                                                         <tr>
-                                                                            <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; border-radius: 5px; text-align: left;">{{ trans('frontend.contact_us.content.name') }}</td>
+                                                                            <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; border-radius: 5px; text-align: left;">{{ __('Name') }}</td>
                                                                             <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; border-radius: 5px; text-align: left;">{{ $name }}</td>
                                                                         </tr>
                                                                         <tr>
-                                                                            <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; border-radius: 5px; text-align: left;">{{ trans('frontend.contact_us.content.email') }}</td>
+                                                                            <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; border-radius: 5px; text-align: left;">{{ __('Email') }}</td>
                                                                             <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; border-radius: 5px; text-align: left;">{{ $email }}</td>
                                                                         </tr>
                                                                         <tr>
-                                                                            <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; border-radius: 5px; text-align: left;">{{ trans('frontend.contact_us.content.phone') }}</td>
+                                                                            <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; border-radius: 5px; text-align: left;">{{ __('Phone') }}</td>
                                                                             <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; border-radius: 5px; text-align: left;">{{ $phone }}</td>
                                                                         </tr>
                                                                         <tr>
-                                                                            <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; border-radius: 5px; text-align: left;">{{ trans('frontend.contact_us.content.subject') }}</td>
+                                                                            <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; border-radius: 5px; text-align: left;">{{ __('Subject') }}</td>
                                                                             <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; border-radius: 5px; text-align: left;">{{ $subject }}</td>
                                                                         </tr>
                                                                         <tr>
-                                                                            <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; border-radius: 5px; text-align: left;">{{ trans('frontend.contact_us.content.note') }}</td>
+                                                                            <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; border-radius: 5px; text-align: left;">{{ __('Message') }}</td>
                                                                             <td style="font-family: sans-serif; font-size: 14px; vertical-align: top; border-radius: 5px; text-align: left;">{{ $note }}</td>
                                                                         </tr>
                                                                     </tbody>
@@ -133,7 +133,7 @@
                                                         </tr>
                                                     </tbody>
                                                 </table>
-                                                <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; margin-bottom: 15px;">{{ trans('frontend.contact_us.mail.thanks') }}</p>
+                                                <p style="font-family: sans-serif; font-size: 14px; font-weight: normal; margin: 0; margin-bottom: 15px;">{{ __('Thanks.') }}</p>
                                             </td>
                                         </tr>
                                     </table>
