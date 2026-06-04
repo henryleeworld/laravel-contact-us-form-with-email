@@ -8,13 +8,17 @@ use Illuminate\Http\Request;
 
 class ContactUsController extends Controller
 {
-    // Create Contact Form
+    /**
+     * Display a listing of the resource.
+     */
     public function index(Request $request)
     {
         return view('contact-us');
     }
 
-    // Store Contact Form data
+    /**
+     * Store a newly created resource in storage.
+     */
     public function store(StoreContactUsRequest $request)
     {
         //  Store data in database

@@ -9,7 +9,7 @@ class ContactUs extends Model
     /**
      * The attributes that are mass assignable.
      *
-     * @var array<int, string>
+     * @var list<string>
      */
     public $fillable = ['name', 'email', 'phone', 'subject', 'note'];
 }
