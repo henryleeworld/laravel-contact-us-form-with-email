@@ -1,4 +1,4 @@
-# Laravel 12 透過電子郵件聯絡表單
+# Laravel 13 透過電子郵件聯絡表單
 
 透過電子郵件聯絡表單取得網站訪客的意見回饋，進而改善產品和服務，並運用這些想法改善所有人的體驗。 
 
@@ -26,8 +26,8 @@ $ php artisan migrate
 ----
 
 ## 畫面截圖
-![](https://i.imgur.com/UyaiFA7.png)
+![](https://i.imgur.com/BkO8UNT.png)
 > 訪客透過聯絡表單傳達訊息
 
-![](https://i.imgur.com/Bgx50nw.png)
+![](https://i.imgur.com/n4aTJq6.png)
 > 透過表單寄送電子郵件給網站管理者

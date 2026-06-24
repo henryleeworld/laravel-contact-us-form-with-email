@@ -2,14 +2,10 @@
 
 namespace App\Models;
 
+use Illuminate\Database\Eloquent\Attributes\Fillable;
 use Illuminate\Database\Eloquent\Model;
 
+#[Fillable(['name', 'email', 'phone', 'subject', 'note'])]
 class ContactUs extends Model
 {
-    /**
-     * The attributes that are mass assignable.
-     *
-     * @var list<string>
-     */
-    public $fillable = ['name', 'email', 'phone', 'subject', 'note'];
 }
